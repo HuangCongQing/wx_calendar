@@ -2,15 +2,15 @@
 * @Author: HuangChonging
 * @Date:   2017-08-05 16:53:31
 * @Last Modified by:   hasee
-* @Last Modified time: 2017-08-10 17:45:52
+* @Last Modified time: 2017-08-11 09:56:57
 */
 const conf = {
   data: {
     hasEmptyGrid: false,
-    campany: "百度校招",
-    position: "产品实习生",
-    start: "8.21",
-    end: "8.24",
+    campany: "重庆",
+    position: "重庆",
+    start: "8.05",
+    end: "000",
     // 假设点击9
     id: 9,
     changeColor: "color: #969696 "

@@ -24,6 +24,6 @@
 
 #### 效果图
 
-![](https://ooo.0o0.ooo/2017/06/17/59447d1d12c04.gif)
+![微信小程序](http://ojmcn9nlw.qnssl.com/blog/20170811/102331066.gif)
 
 欢迎反馈...

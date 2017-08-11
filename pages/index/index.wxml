@@ -33,8 +33,8 @@
           <view class="information">
                <image class="tick" src="http://ojmcn9nlw.qnssl.com/blog/20170809/162045913.png?imageslim" ></image> 
                <view class="company">
-                  <text class="tips">{{campany}}：{{position}} 网申开始</text>
-                   <text class="times">网申时间段: {{start}}--{{end}}</text>
+                  <text class="tips">{{campany}}：{{position}} 微信小程序开始</text>
+                   <text class="times">微信时间段: {{start}}--{{end}}</text>
                 </view>
           </view>
           <navigator url="" hover-class="none">
