@@ -1,0 +1,45 @@
+<!-- @HuangChongqing writer -->
+<view class="flex box box-tb box-align-center">
+  <view class="calendar box box-tb">
+        <view class="top-handle fs36 box box-lr box-align-center">
+            <!-- 向前一月 -->
+            <view class="prev box box-rl" bindtap="handleCalendar" data-handle="prev">
+                <view class="prev-handle box box-lr box-align-center box-pack-center"></view>
+            </view>
+            <!-- XX年XX月 -->
+            <view class="date-area box box-lr box-align-center box-pack-center">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
+            <!-- 向后一月 -->
+            <view class="next box box-lr" bindtap="handleCalendar" data-handle="next">
+                <view class="next-handle box box-lr box-align-center box-pack-center"></view>
+            </view>
+        </view>
+        <!-- 周一到周日 weeks-->
+        <view class="weeks box box-lr box-pack-center box-align-center">
+            <view class="flex week fs28" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
+        </view>
+        <!-- 每月天数 -->
+        <view class="days box box-lr box-wrap">
+              <!-- 前有多少空格 -->
+            <view wx:if="{{hasEmptyGrid}}" class="grid white-color box box-align-center box-pack-center" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
+            </view>
+            <view class="grid white-color box box-align-center box-pack-center {{ cur_year==2017 && cur_month==8 && cur_day == index+1 ? 'nowaday' :'' }} {{cur_year==2017 && cur_month==8 && index == 21  ? 'cir-bg' : ''}} {{cur_year==2017 && cur_month==8 && index == 23  ? 'cir-bg' : ''}}" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}">
+                <view bindtap= "showInfo" data-date="{{index+1}}" class=" day  box box-align-center box-pack-center {{index+1==getDays67[0]||index+1==getDays67[0]||index+1==getDays67[1]||index+1==getDays67[2]||index+1==getDays67[3]||index+1==getDays67[4]||index+1==getDays67[5]||index+1==getDays67[6]||index+1==getDays67[7]||index+1==getDays67[8]||index+1==getDays67[9]? 'changeColor': 'othersColor'}}" >{{item}}</view>
+                <!-- style= "{{changeColor}}"另一种方法待定 -->
+            </view>
+        </view>
+        <!-- wx:for=""有后台数据时，item.id是否和所点击的时期匹配 -->
+        <!-- wx:if数据匹配 -->
+        <view id="list-details" wx:if="{{match_data==22 &&cur_year==2017 && cur_month==8}}">
+          <view class="information">
+               <image class="tick" src="http://ojmcn9nlw.qnssl.com/blog/20170809/162045913.png?imageslim" ></image> 
+               <view class="company">
+                  <text class="tips">{{campany}}：{{position}} 网申开始</text>
+                   <text class="times">网申时间段: {{start}}--{{end}}</text>
+                </view>
+          </view>
+          <navigator url="" hover-class="none">
+           <text class="detailed">查看详情</text>
+          </navigator>
+        </view>
+    </view>
+</view>

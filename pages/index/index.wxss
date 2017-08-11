@@ -1,0 +1,340 @@
+/* pages/calendar/calendar.wxss */
+/* 日历头部 */
+.top-handle {
+    height: 80rpx;
+    color:#00caab;
+    font-size: 24px; 
+    /* 箭头；两端对齐 */
+    justify-content:space-between;
+
+}
+/* 当天显示 */
+.nowaday{
+    background-image: url('http://ojmcn9nlw.qnssl.com/blog/20170810/142205578.png?imageslim');
+    background-repeat: no-repeat;  
+    background-position:center;    
+    background-size: 90% 90%;  
+    /* border-radius: 120rpx; */
+}
+/* 上一月 */
+.prev {
+    text-align: right;
+    height: 80rpx;
+    background: url('http://ojmcn9nlw.qnssl.com/blog/20170809/161828478.png?imageslim' )no-repeat center;
+    background-size:24rpx;
+}
+/* 下月 */
+.next {
+    height: 80rpx;
+    
+    background: url('http://ojmcn9nlw.qnssl.com/blog/20170809/161940968.png?imageslim' )no-repeat center;
+    background-size:24rpx;
+}
+
+.prev-handle {
+    width: 80rpx;
+    height: 100%;
+}
+.next-handle {
+    width: 80rpx;
+    height: 100%;
+}
+.date-area {
+    width: 50%;
+    height: 80rpx;
+    text-align: center;
+    letter-spacing: -3px;
+}
+.weeks {
+    height: 50rpx;
+    line-height: 50rpx;
+    /* opacity: 0.5; */
+    color:#969696;
+}
+.week {
+    text-align: center;
+}
+/* 周六周日颜色变暗 */
+.changeColor{
+    color:#969696;
+}
+.othersColor{
+   color: #333333;
+}
+.days {
+    height: 500rpx;
+     color: #262626; 
+}
+.grid {
+    width: 107.1428571429rpx;
+}
+.day {
+    width: 60rpx;
+    height: 60rpx;
+    /* color: #333333; */
+    font-size: 50rpx;
+    font-weight: 200;
+}
+/* .border-radius {
+    
+} */
+.cir-bg {
+    /* border-radius: 50%; */
+        position: relative;
+        left: 0;
+        top: 0;
+        color: #262626;
+
+    /* background-color: #ff629a; */
+    background-image: url('http://ojmcn9nlw.qnssl.com/blog/20170809/162009425.png?imageslim');
+    background-repeat: no-repeat;  
+     background-position:center;    
+      background-size: 90% 90%;  
+    /* background-size: 20rpx; */
+}
+.purple-bg {
+    background-color: #333333;
+}
+
+.right-triangle::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-left-color: #ff629a;
+    position: absolute;
+    right: -22rpx;
+    top: 18rpx;
+}
+.left-triangle::before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: 15rpx solid transparent;
+    border-right-color: #ff629a;
+    position: absolute;
+    left: -22rpx;
+    top: 18rpx;
+}
+.tips {
+    text-align: center;
+    margin-top: 20rpx;
+    margin-bottom: 20rpx;
+    /* font-family: 'PingFang SC Medium'; */
+}
+.types {
+    background-color: #ffedf4;
+    height: 50rpx;
+}
+.type-dot {
+    width: 25rpx;
+    height: 25rpx;
+    border-radius: 50%;
+    margin-right: 10rpx;
+}
+.type-dot-ymq {
+    color:rgb(255, 124, 160);
+    background-color: rgb(255, 124, 160);
+}
+.type-dot-ycq {
+    color: rgb(255, 200, 202);
+    background-color: rgb(255, 200, 202);
+}
+.type-dot-aqq {
+    color: rgb(118, 191, 92);
+    background-color: rgb(118, 191, 92);
+}
+.type-dot-yyq {
+    color: rgb(255, 182, 236);
+    background-color: rgb(255, 182, 236);
+}
+.type-dot-plr {
+    color: rgb(211, 189, 215);
+    background-color: rgb(211, 189, 215);
+}
+.types-desc {
+    padding: 0 20rpx;
+}
+.type-name {
+    margin-top: 50rpx;
+    margin-bottom: 30rpx;
+}
+.type-desc {
+    padding: 0 35rpx;
+    line-height: 38rpx;
+}
+.explain {
+    border-top: 1px solid #eee;
+    width: 90%;
+    margin: 20rpx 5% 20rpx 5%;
+    padding: 20rpx 0;
+}
+.explain-title {
+    font-weight: bold;
+    margin-bottom: 15rpx;
+}
+.explain-item {
+    padding: 8rpx 20rpx;
+    color: #fff;
+}
+.left-border-radius {
+    border-top-left-radius: 20rpx;
+    border-bottom-left-radius: 20rpx;
+}
+.right-border-radius {
+    border-top-right-radius: 20rpx;
+    border-bottom-right-radius: 20rpx;
+}
+/* 列表详情 */
+#list-details{
+display: flex;
+height:120rpx;
+font-size:24rpx;
+justify-content: space-between;
+padding: 10rpx;
+/* background: #ff0000;  */
+border-top: 1px solid #ccc;
+border-bottom: 1rpx solid #ccc;
+margin-top: -1rpx;
+}
+.detailed{
+  font-size: 30rpx;
+  text-align: center;
+  line-height: 120rpx;
+  color: #848080;
+}
+image{
+  /* display: inline-block; */
+  width: 50rpx;
+  height: 50rpx;
+  /* mode: "scaleToFill"; */
+  padding: 0 20rpx 40rpx 0
+
+}
+.company{
+  display: inline-block;
+  font-size: 28rpx;
+}
+.tips {
+display: block;
+font-size: 32rpx;
+font-weight: bold
+}
+.times{
+display: block;
+color: #848080;
+
+}
+/* 公共引用样式 */
+
+.box {
+    display: flex;
+}
+
+.box-lr {
+    flex-direction: row;
+}
+
+.box-rl {
+    flex-direction: row-reverse;
+}
+
+.box-tb {
+    flex-direction: column;
+}
+
+.box-bt {
+    flex-direction: column-reverse;
+}
+
+.box-pack-center {
+    justify-content: center;
+}
+
+.box-pack-start {
+    justify-content: flex-start;
+}
+
+.box-pack-end {
+    justify-content: flex-end;
+}
+
+.box-pack-between {
+    justify-content: space-between;
+}
+
+.box-pack-around {
+    justify-content: space-around;
+}
+
+.box-align-center {
+    align-items: center;
+}
+
+.box-align-start {
+    align-items: flex-start;
+}
+
+.box-align-end {
+    align-items: flex-end;
+}
+
+.self-align-center {
+    align-self: center;
+    margin: 0 auto;
+}
+
+.self-align-start {
+    align-self: flex-start;
+}
+
+.self-align-end {
+    align-self: flex-end;
+}
+
+.self-align-stretch {
+    align-self: stretch;
+}
+
+.box-wrap {
+    flex-wrap: wrap;
+}
+
+.box-nowrap {
+    flex-wrap: nowrap;
+}
+
+.flex {
+    flex-grow: 1;
+}
+
+.shrink {
+    flex-shrink: 1;
+}
+.bg {
+  background-image: linear-gradient(to bottom, #faefe7, #ffcbd7);
+  overflow: hidden;
+}
+.brown-color {
+  color: #784344;
+}
+.pink-color {
+  color: #ff629a;
+}
+.white-color {
+  color: #fff;
+}
+/* .fs24 {
+  font-size: 24rpx;
+}
+.fs28 {
+  font-size: 28rpx;
+}
+.fs32 {
+  font-size: 32rpx;
+}
+.fs36 {
+  font-size: 36rpx;
+} */
